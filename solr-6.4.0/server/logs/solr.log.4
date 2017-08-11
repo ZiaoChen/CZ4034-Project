@@ -1,0 +1,120 @@
+2017-04-08 13:03:08.882 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2017-04-08 13:03:11.183 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 6.4.0
+2017-04-08 13:03:11.183 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-04-08 13:03:11.183 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: D:\solr-6.4.0\solr-6.4.0
+2017-04-08 13:03:11.335 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-04-08T13:03:11.198Z
+2017-04-08 13:03:11.335 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-04-08 13:03:11.836 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: D:\solr-6.4.0\solr-6.4.0\server\solr
+2017-04-08 13:03:11.883 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from D:\solr-6.4.0\solr-6.4.0\server\solr\solr.xml
+2017-04-08 13:03:14.919 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-04-08 13:03:16.271 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath D:\solr-6.4.0\solr-6.4.0\server\solr
+2017-04-08 13:03:16.286 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [CZ4034]
+2017-04-08 13:03:17.873 INFO  (main) [   ] o.e.j.s.Server Started @17555ms
+2017-04-08 13:03:18.019 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.c.SolrResourceLoader [CZ4034] Added 51 libs to classloader, from paths: [/D:/solr-6.4.0/solr-6.4.0/contrib/clustering/lib, /D:/solr-6.4.0/solr-6.4.0/contrib/extraction/lib, /D:/solr-6.4.0/solr-6.4.0/contrib/langid/lib, /D:/solr-6.4.0/solr-6.4.0/contrib/velocity/lib, /D:/solr-6.4.0/solr-6.4.0/dist]
+2017-04-08 13:03:31.169 INFO  (qtp581374081-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=9620
+2017-04-08 13:03:33.287 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-04-08 13:03:34.622 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.s.IndexSchema [CZ4034] Schema name=example-basic
+2017-04-08 13:03:35.990 WARN  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.SynonymFilterFactory]. Please consult documentation how to replace it accordingly.
+2017-04-08 13:03:40.342 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.s.IndexSchema Loaded schema example-basic/1.6 with uniqueid field id
+2017-04-08 13:03:40.393 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.c.CoreContainer Creating SolrCore 'CZ4034' using configuration from instancedir D:\solr-6.4.0\solr-6.4.0\server\solr\CZ4034
+2017-04-08 13:03:40.726 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.c.SolrCore [[CZ4034] ] Opening new SolrCore at [D:\solr-6.4.0\solr-6.4.0\server\solr\CZ4034], dataDir=[D:\solr-6.4.0\solr-6.4.0\server\solr\CZ4034\data\]
+2017-04-08 13:03:40.726 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@d6e7bab
+2017-04-08 13:03:41.126 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-04-08 13:03:42.353 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-04-08 13:03:42.353 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-04-08 13:03:42.596 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-04-08 13:03:42.596 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-04-08 13:03:44.769 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.s.SolrIndexSearcher Opening [Searcher@4103391c[CZ4034] main]
+2017-04-08 13:03:45.055 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: D:\solr-6.4.0\solr-6.4.0\server\solr\CZ4034\conf
+2017-04-08 13:03:45.141 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-04-08 13:03:45.143 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.s.s.Suggester init: {name=suggest,classname=org.apache.solr.spelling.suggest.Suggester,lookupImpl=org.apache.solr.spelling.suggest.tst.TSTLookup,field=content_raw,threshold=0.01,comparatorClass=freq,buildOnOptimize=true,buildOnCommit=true}
+2017-04-08 13:03:45.173 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.h.c.SpellCheckComponent Registering newSearcher listener for spellchecker: suggest
+2017-04-08 13:03:45.175 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-04-08 13:03:45.187 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=content_raw,classname=solr.DirectSolrSpellChecker,distanceMeasure=org.apache.lucene.search.spell.LevensteinDistance,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-04-08 13:03:45.190 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: D:\solr-6.4.0\solr-6.4.0\server\solr\CZ4034\conf\elevate.xml
+2017-04-08 13:03:45.232 INFO  (coreLoadExecutor-6-thread-1) [   x:CZ4034] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-04-08 13:03:45.278 INFO  (searcherExecutor-7-thread-1-processing-x:CZ4034) [   x:CZ4034] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@4103391c[CZ4034] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_25r(6.4.0):C11400) Uninverting(_25s(6.4.0):C200) Uninverting(_25t(6.4.0):C200) Uninverting(_25u(6.4.0):C200)))}
+2017-04-08 13:03:45.278 INFO  (searcherExecutor-7-thread-1-processing-x:CZ4034) [   x:CZ4034] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-04-08 13:03:45.278 INFO  (searcherExecutor-7-thread-1-processing-x:CZ4034) [   x:CZ4034] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: suggest
+2017-04-08 13:03:45.278 INFO  (searcherExecutor-7-thread-1-processing-x:CZ4034) [   x:CZ4034] o.a.s.s.s.Suggester reload()
+2017-04-08 13:03:45.279 INFO  (searcherExecutor-7-thread-1-processing-x:CZ4034) [   x:CZ4034] o.a.s.s.s.Suggester build()
+2017-04-08 13:03:46.027 INFO  (qtp581374081-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=599
+2017-04-08 13:03:47.430 INFO  (qtp581374081-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=1401
+2017-04-08 13:03:48.648 INFO  (qtp581374081-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=1226
+2017-04-08 13:03:49.015 INFO  (searcherExecutor-7-thread-1-processing-x:CZ4034) [   x:CZ4034] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-04-08 13:03:49.017 INFO  (searcherExecutor-7-thread-1-processing-x:CZ4034) [   x:CZ4034] o.a.s.c.SolrCore [CZ4034] Registered new searcher Searcher@4103391c[CZ4034] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_25r(6.4.0):C11400) Uninverting(_25s(6.4.0):C200) Uninverting(_25t(6.4.0):C200) Uninverting(_25u(6.4.0):C200)))}
+2017-04-08 13:09:11.395 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=12000 status=0 QTime=119
+2017-04-08 13:09:50.234 INFO  (qtp581374081-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=14
+2017-04-08 13:09:50.241 INFO  (qtp581374081-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1491656625123} status=0 QTime=4
+2017-04-08 13:09:50.255 INFO  (qtp581374081-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=20
+2017-04-08 13:09:50.274 INFO  (qtp581374081-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=0
+2017-04-08 13:09:50.276 INFO  (qtp581374081-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1491656625123} status=0 QTime=1
+2017-04-08 13:09:50.288 INFO  (qtp581374081-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=14
+2017-04-08 13:09:53.173 INFO  (qtp581374081-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=0
+2017-04-08 13:09:53.177 INFO  (qtp581374081-17) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1491656993166} status=0 QTime=1
+2017-04-08 13:09:53.180 INFO  (qtp581374081-21) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/replication params={wt=json&command=details&_=1491656993166} status=0 QTime=3
+2017-04-08 13:09:53.182 INFO  (qtp581374081-22) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1491656625123&ts=1491656625123} status=503 QTime=1
+2017-04-08 13:09:53.198 INFO  (qtp581374081-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=24
+2017-04-08 13:09:53.198 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/system params={wt=json&_=1491656993166} status=0 QTime=17
+2017-04-08 13:09:55.062 INFO  (qtp581374081-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=0
+2017-04-08 13:09:55.092 INFO  (qtp581374081-22) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/config params={wt=json&_=1491656995040} status=0 QTime=27
+2017-04-08 13:09:55.092 INFO  (qtp581374081-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=30
+2017-04-08 13:09:55.093 INFO  (qtp581374081-21) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1491656993166} status=0 QTime=30
+2017-04-08 13:09:55.421 INFO  (qtp581374081-20) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1491656993166} status=0 QTime=266
+2017-04-08 13:09:57.496 INFO  (qtp581374081-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=0
+2017-04-08 13:09:57.499 INFO  (qtp581374081-17) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1491656993166} status=0 QTime=1
+2017-04-08 13:09:57.499 INFO  (qtp581374081-18) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/config params={wt=json&_=1491656995040} status=0 QTime=0
+2017-04-08 13:09:57.511 INFO  (qtp581374081-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=13
+2017-04-08 13:09:57.548 INFO  (qtp581374081-22) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1491656993166} status=0 QTime=3
+2017-04-08 13:13:56.408 INFO  (qtp581374081-16) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=12000 status=0 QTime=0
+2017-04-08 13:14:03.596 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Business&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=29 status=0 QTime=55
+2017-04-08 13:14:05.230 INFO  (qtp581374081-18) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Political&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=11393 status=0 QTime=8
+2017-04-08 13:14:06.704 INFO  (qtp581374081-23) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Social&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=330 status=0 QTime=1
+2017-04-08 13:14:07.743 INFO  (qtp581374081-18) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Technology&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=48 status=0 QTime=1
+2017-04-08 13:14:09.104 INFO  (qtp581374081-17) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Other&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=200 status=0 QTime=1
+2017-04-08 13:14:11.913 INFO  (qtp581374081-18) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:CNN+AND+category:Other&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=32 status=0 QTime=176
+2017-04-08 13:14:14.557 INFO  (qtp581374081-21) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:CNN&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=2
+2017-04-08 13:14:15.448 INFO  (qtp581374081-22) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=2
+2017-04-08 13:16:31.744 INFO  (qtp581374081-21) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=content:"onald"+AND+name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=44 status=0 QTime=78
+2017-04-08 13:16:31.831 INFO  (qtp581374081-20) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/suggest params={q=onald&wt=json} status=0 QTime=42
+2017-04-08 13:16:34.410 INFO  (qtp581374081-15) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=content:"donald"+AND+name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=38 status=0 QTime=62
+2017-04-08 13:16:34.420 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/suggest params={q=donald&wt=json} status=0 QTime=1
+2017-04-08 13:16:39.437 INFO  (qtp581374081-18) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=content:"donal+trum"+AND+name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=32 status=0 QTime=151
+2017-04-08 13:16:39.446 INFO  (qtp581374081-21) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/suggest params={q=donal+trum&wt=json} status=0 QTime=0
+2017-04-08 13:29:03.864 INFO  (qtp581374081-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=0
+2017-04-08 13:29:03.879 INFO  (qtp581374081-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=15
+2017-04-08 13:29:05.379 INFO  (qtp581374081-22) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&indent=on&wt=json&_=1491658143835} hits=12000 status=0 QTime=2
+2017-04-08 13:29:07.669 INFO  (qtp581374081-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=0
+2017-04-08 13:29:07.672 INFO  (qtp581374081-21) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/config params={wt=json&_=1491656995040} status=0 QTime=0
+2017-04-08 13:29:07.673 INFO  (qtp581374081-17) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1491656993166} status=0 QTime=1
+2017-04-08 13:29:07.683 INFO  (qtp581374081-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=14
+2017-04-08 13:29:07.709 INFO  (qtp581374081-18) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1491656993166} status=0 QTime=3
+2017-04-08 13:29:09.829 INFO  (qtp581374081-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1491656625123} status=0 QTime=0
+2017-04-08 13:29:09.830 INFO  (qtp581374081-16) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1491656993166} status=0 QTime=1
+2017-04-08 13:29:09.860 INFO  (qtp581374081-17) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1491656993166} status=0 QTime=3
+2017-04-08 13:29:09.861 INFO  (qtp581374081-20) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/config params={wt=json&_=1491656995040} status=0 QTime=0
+2017-04-08 13:29:09.873 INFO  (qtp581374081-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1491656625123} status=0 QTime=44
+2017-04-08 13:29:32.999 INFO  (qtp581374081-23) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=12000 status=0 QTime=0
+2017-04-08 13:29:40.112 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Business&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=29 status=0 QTime=0
+2017-04-08 13:29:40.922 INFO  (qtp581374081-20) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Political&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=11393 status=0 QTime=0
+2017-04-08 13:29:42.474 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Social&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=330 status=0 QTime=0
+2017-04-08 13:29:44.280 INFO  (qtp581374081-20) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Technology&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=48 status=0 QTime=0
+2017-04-08 13:29:45.611 INFO  (qtp581374081-22) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=category:Other&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=200 status=0 QTime=0
+2017-04-08 13:29:49.866 INFO  (qtp581374081-15) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=12000 status=0 QTime=0
+2017-04-08 13:29:51.749 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:CNN&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=0
+2017-04-08 13:29:54.100 INFO  (qtp581374081-20) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=0
+2017-04-08 13:29:55.458 INFO  (qtp581374081-22) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:STcom&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=44
+2017-04-08 13:29:57.197 INFO  (qtp581374081-21) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:nytimes&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=1
+2017-04-08 13:29:58.435 INFO  (qtp581374081-15) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:WSJ&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=1
+2017-04-08 13:30:01.685 INFO  (qtp581374081-20) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=12000 status=0 QTime=0
+2017-04-08 13:30:08.168 INFO  (qtp581374081-17) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=12000 status=0 QTime=0
+2017-04-08 13:30:10.987 INFO  (qtp581374081-15) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=12000 status=0 QTime=0
+2017-04-08 13:30:14.604 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=*:*&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=12000 status=0 QTime=0
+2017-04-08 13:30:37.262 INFO  (qtp581374081-23) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=0
+2017-04-08 13:30:41.904 INFO  (qtp581374081-18) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=2400 status=0 QTime=0
+2017-04-08 13:30:59.172 INFO  (qtp581374081-14) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=content:"donald+trump"+AND+name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=32 status=0 QTime=2
+2017-04-08 13:30:59.183 INFO  (qtp581374081-20) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/suggest params={q=donald+trump&wt=json} status=0 QTime=0
+2017-04-08 13:31:04.035 INFO  (qtp581374081-15) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=content:"donal+trum"+AND+name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=32 status=0 QTime=0
+2017-04-08 13:31:04.046 INFO  (qtp581374081-22) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/suggest params={q=donal+trum&wt=json} status=0 QTime=0
+2017-04-08 13:31:08.365 INFO  (qtp581374081-17) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/select params={q=content:"donald+trump"+AND+name:BBCWorld&fl=*,score&sort=time+desc&rows=100&wt=standard&version=2.2} hits=32 status=0 QTime=0
+2017-04-08 13:31:08.372 INFO  (qtp581374081-18) [   x:CZ4034] o.a.s.c.S.Request [CZ4034]  webapp=/solr path=/suggest params={q=donald+trump&wt=json} status=0 QTime=0

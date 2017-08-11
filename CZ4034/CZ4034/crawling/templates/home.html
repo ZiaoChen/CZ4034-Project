@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="\static\bootstrap-3.3.7-dist\css\bootstrap.min.css" rel="stylesheet">
+    <link href="\static\bootstrap-3.3.7-dist\css\bootstrap.css" rel="stylesheet">
+    <link href="\static\bootstrap-3.3.7-dist\css\bootstrap-theme.css" rel="stylesheet">
+    <link href="\static\bootstrap-3.3.7-dist\css\bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <title>Welcome to our application</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><b>CZ4034</b></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Crawl</a></li>
+            </ul>
+            <div class="col-xs-9">
+            <form class="navbar-form">
+                <div style="display:table;" class="input-group">
+                    <a href="" onclick="javascript:this.href = '/Search/'+document.getElementById('search').value" style="width: 1%;" class="input-group-addon btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</a>
+                    <input id="search" type="text" autofocus="autofocus" autocomplete="off" placeholder="Search Here" name="search" style="" class="form-control">
+                </div>
+            </form>
+            </div>
+        </div>
+      </div>
+</nav>
+<div class = "container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidebar">
+        </div>
+        <div class="col-sm-9 col-sm-3 main">
+            {% for status in status_list %}
+            <p>{{status}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="\static\bootstrap-3.3.7-dist\css\bootstrap.min.css" rel="stylesheet">
+    <script src="\static\node_modules\jquery\dist\jquery.js"></script>
+    <script src="\static\bootstrap-3.3.7-dist\js\bootstrap.js"></script>
+    <link href="\static\bootstrap-3.3.7-dist\css\bootstrap.css" rel="stylesheet">
+    <link href="\static\bootstrap-3.3.7-dist\css\bootstrap-theme.css" rel="stylesheet">
+    <link href="\static\bootstrap-3.3.7-dist\css\bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <title>Welcome to our application</title>
+
+    <script type="text/javascript">
+
+        function handle(event){
+            if (event.keyCode == 13){
+                event.preventDefault()
+                submitsearchresult()
+            }
+
+        }
+
+        function submitsearchresult(){
+            window.location.href = "/1"+'/Search/'+"{{category}}"+"/"+"{{source}}"+'/'+ document.getElementById("search").value;
+
+        }
+
+        function submitcategory(value){
+             window.location.href = "/1"+'/Search/'+value+'/'+ "{{source}}"+'/'+ document.getElementById("search").value;
+
+        }
+
+        function submitsource(value){
+             window.location.href ="/1"+ '/Search/'+"{{category}}"+'/'+ value+'/'+ document.getElementById("search").value;
+
+        }
+
+        function submitsuggestion(suggestion){
+
+            window.location.href = "/1"+'/Search/'+"{{category}}"+"/"+"{{source}}"+'/'+ suggestion;
+
+        }
+
+        function submitsort(sort){
+
+            window.location.href = "/1"+"/"+"{{category}}"+"/"+"{{source}}"+'/'+ sort+'/'+document.getElementById("search").value;
+
+        }
+
+        function submitpage(page){
+            if ("{{sort}}"){
+                window.location.href = "/"+page+"/"+"{{category}}"+"/"+"{{source}}"+'/'+ "{{sort}}"+'/'+document.getElementById("search").value;}
+            else{
+                window.location.href = "/"+page+"/Search"+"/"+"{{category}}"+"/"+"{{source}}"+'/'+document.getElementById("search").value;
+            }
+        }
+
+        function replaceURLWithHTMLLinks() {
+
+            var source = "{{source}}"
+            var cat = "{{category}}"
+            document.getElementById(source).disabled = true
+            document.getElementById(source).style.background = '#222222'
+            document.getElementById(source).style.color = '#eeeeee'
+            document.getElementById(cat).disabled = true
+            document.getElementById(cat).style.background ='#222222'
+            document.getElementById(cat).style.color ='#eeeeee'
+
+
+        var content_list = document.getElementsByClassName("content")
+        for (var i = 0;i< content_list.length;i++){
+
+        var inputText= content_list[i].textContent;
+        var replacePattern1 = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+
+        var replacedText = inputText.replace(replacePattern1, '<a href="$1" target="_blank">$1</a>');
+        content_list[i].innerHTML=replacedText;
+        }
+        }
+
+        $( document ).ready(function() {
+            $("#checkAll").click(function () {
+            $(".check").prop('checked', $(this).prop('checked'));
+        });
+        });
+
+
+    </script>
+</head>
+
+
+<body onload="replaceURLWithHTMLLinks()">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><b>CZ4034</b></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <div class="col-xs-11">
+            <form class="navbar-form">
+                <div style="display:table;" class="input-group">
+                    <a onclick="submitsearchresult()" style="width: 1%;" class="input-group-addon btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</a>
+                    <input onkeypress="handle(event)" id = "search" type="text" autofocus="autofocus" autocomplete="off" placeholder="Search Here" name="search" style="" class="form-control" value="{{search_value}}">
+                </div>
+            </form>
+            </div>
+        </div>
+      </div>
+</nav>
+<div class = "container-fluid">
+    <div class="row">
+        
+        <div class="col-sm-3 sidebar">
+            <div class="list-group" style="width: 70%; margin-left: 15%">
+                <div class="list-group-item" style="text-align: center; background: #222222; color: #eeeeee"><strong>Categories</strong></div>
+                <button id = "All" type="button" onclick="submitcategory('All')" class="list-group-item" style="text-align: center;">All</button>
+                <button id = "Business" type="button" onclick="submitcategory('Business')" class="list-group-item" style="text-align: center;">Business</button>
+                <button id = "Political" type="button" onclick="submitcategory('Political')" class="list-group-item" style="text-align: center;">Political</button>
+                <button id = "Social" type="button" onclick="submitcategory('Social')" class="list-group-item" style="text-align: center;">Social</button>
+                <button id = "Technology" type="button" onclick="submitcategory('Technology')" class="list-group-item" style="text-align: center;">Technology</button>
+                <button id = "Other" type="button" onclick="submitcategory('Other')" class="list-group-item" style="text-align: center;">Other</button>
+            </div>
+            <div class="list-group" style="width: 70%; margin-left: 15%">
+                <div class="list-group-item" style="text-align: center; background: #222222; color: #eeeeee"><strong>Source</strong></div>
+                <button id = "All2" onclick="submitsource('All2')" type="button" class="list-group-item" style="text-align: center;">All</button>
+                <button id = "CNN" onclick="submitsource('CNN')" type="button" class="list-group-item" style="text-align: center;">CNN</button>
+                <button id = "BBCWorld" onclick="submitsource('BBCWorld')" type="button" class="list-group-item" style="text-align: center;">BBCWorld</button>
+                <button id = "STcom" onclick="submitsource('STcom')" type="button" class="list-group-item" style="text-align: center;">Straits Times</button>
+                <button id = "nytimes" onclick="submitsource('nytimes')" type="button" class="list-group-item" style="text-align: center;">New York Times</button>
+                <button id = "WSJ" onclick="submitsource('WSJ')" type="button" class="list-group-item" style="text-align: center;">Wall Street Journal</button>
+            </div>
+        </div>
+        <div class="col-sm-6 main">
+
+            {% if suggestion_list %}
+                Do you mean
+                {% for suggestion in suggestion_list %}
+                    <button onclick="submitsuggestion('{{suggestion}}')">{{suggestion}}</button>
+                {% endfor %}
+                ?
+            {% endif %}
+            <br>
+            <br>
+
+            {% for status in status_list %}
+
+                 <div class="panel-group">
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="http://www.twitter.com/{{status.name}}">
+                                        <img class="img-circle" src="{{status.profile_image}}" alt="image" width="50" height="50">
+                                    </a>
+                                </div>
+                            <div class="media-body">
+                                <a href="http://www.twitter.com/{{status.name}}">
+                                    <h4 class="media-heading"><strong>{{status.name}}</strong></h4>
+                                </a>
+                                <p class="content">
+                               {{status.content}}
+                                </p>
+                                {% if status.tweet_image != "no image" %}
+                                <a href="http://www.theindependent.sg/ntu-don-who-wants-100-water-price-hike-also-wants-more-foreign-migrants-in-singapore/" class="thumbnail" title="NTU Don who wants 100% water price hike also wants more foreign migrants in Singapore">
+                                    <img src="{{status.tweet_image}}" alt="NTU Don who wants 100% water price hike also wants more foreign migrants in Singapore" style=" display:block;">
+                                </a>
+                                {% endif %}
+                                <br />
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <div class="col-sm-4"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span><small class="text-muted"> &nbsp;{{status.category}}</small></div>
+                                        <div class="col-sm-4"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span><small class="text-muted"> &nbsp;{{status.retweet_count}}</small></div>
+                                        <div class="col-sm-4"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><small class="text-muted"> &nbsp;{{status.like}}</small></div>
+
+                                    </div>
+                                </div>
+                                <small class="text-muted">{{status.time}}</small>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        {% endfor %}
+
+                        <nav aria-label="Page navigation">
+  <ul class="pagination" style = "text-align:center">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+      {% for page in pages %}
+        <li><a onclick="submitpage('{{page}}')">{{page}}</a></li>
+      {% endfor %}
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+        </div>
+
+        <div class="col-sm-3 sidebar">
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 200px; background: #222222; color: #eeeeee">
+                Sort by <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" style="width: 200px; text-align: center">
+                    <li><a href="#" onclick="submitsort('Time')" data-target="#">Time</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" onclick="submitsort('Popularity')" data-target="#">Popularity</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" onclick="submitsort('Retweet')" data-target="#">Retweet Count</a></li>
+                </ul>
+            </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <form action="/UpdateData/" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary" style="width: 200px; background: #222222; color: #eeeeee" data-toggle="modal">
+                    Update
+                </button>
+                <br />
+                <label class="form-group">
+                    <input class="check" type="checkbox" id="checkAll"> All <br />
+                    <input class="check" type="checkbox" name="account_list[]" value="CNN"> CNN <br />
+                    <input class="check" type="checkbox" name="account_list[]" value="BBCWorld"> BBCWorld <br />
+                    <input class="check" type="checkbox" name="account_list[]" value="STcom"> Straits Times <br />
+                    <input class="check" type="checkbox" name="account_list[]" value="nytimes"> New York Times <br />
+                    <input class="check" type="checkbox" name="account_list[]" value="WSJ"> Wall Street Journal <br />
+
+                </label>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+ 
+
+</body onload="replaceURLWithHTMLLinks()">
+
+</html>
